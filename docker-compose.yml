@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  python:
+    image: python-docker
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 9000:90
+
+  Ubuntu:
+    image: ubuntu-docker
+    build:
+      context: .
+      dockerfile: 2.Dockerfile
+    ports:
+      - 9000:90
